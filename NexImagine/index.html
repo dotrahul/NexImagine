@@ -4,78 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nex Imagine Solutions</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <header>
-        <h1>Nex Imagine Solutions</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <h2>Empowering IT Solutions</h2>
-        <p>Innovative & Reliable IT solutions for your business.</p>
-    </section>
-    
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a cutting-edge IT solutions provider delivering high-quality services to businesses worldwide.</p>
-    </section>
-    
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Web Development</li>
-            <li>Cloud Solutions</li>
-            <li>Cybersecurity</li>
-            <li>IT Consulting</li>
-        </ul>
-    </section>
-    
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Showcasing our past projects.</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Nex Imagine Solutions. All Rights Reserved.</p>
-    </footer>
-    
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            let name = document.getElementById('name').value;
-            let email = document.getElementById('email').value;
-            let message = document.getElementById('message').value;
-            
-            if (name && email && message) {
-                alert('Thank you, ' + name + '! Your message has been received.');
-                document.getElementById('contact-form').reset();
-            } else {
-                alert('Please fill in all fields.');
-            }
-        });
-    </script>
-    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -190,5 +118,79 @@
             background-color: #111;
         }
     </style>
+</head>
+<body>
+    <header>
+        <h1>Nex Imagine Solutions</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Empowering IT Solutions</h2>
+        <p>Innovative & Reliable IT solutions for your business.</p>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a cutting-edge IT solutions provider delivering high-quality services to businesses worldwide.</p>
+    </section>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Cloud Solutions</li>
+            <li>Cybersecurity</li>
+            <li>IT Consulting</li>
+        </ul>
+    </section>
+    
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Showcasing our past projects.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: rahul.infok@gmail.com</p>
+        <p>Phone: +91-8700997501</p>
+        <p>Address: Sector 126, Noida, Uttar Pradesh, India</p>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Nex Imagine Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+            let recipient = "rahul.infok@gmail.com"; // Change this to your email
+
+            if (name && email && message) {
+                let mailtoLink = `mailto:${recipient}?subject=Query from ${name}&body=Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+                window.location.href = mailtoLink;
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
 </body>
 </html>
